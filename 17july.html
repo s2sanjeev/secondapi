@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM API</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="card"></div>
+  </body>
+</html>
+
+<script>
+  const card1 = document.getElementById("card");
+  const cardnum = [
+    10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100,
+    105,
+  ];
+
+  for (let i = 0; i < cardnum.length; i++) {
+    const crecard = document.createElement("div");
+    if (cardnum[i] % 2 === 0) {
+      crecard.style.backgroundColor = "red";
+      crecard.style.height = "80px";
+      crecard.style.width = "80px";
+      crecard.style.display = "flex";
+      crecard.style.alignItems = "center";
+      crecard.style.justifyContent = "center";
+      crecard.style.color = "white";
+      crecard.style.fontSize = "20px";
+    } else {
+      crecard.style.backgroundColor = "blue";
+      crecard.style.height = "80px";
+      crecard.style.width = "80px";
+      crecard.style.display = "flex";
+      crecard.style.alignItems = "center";
+      crecard.style.justifyContent = "center";
+      crecard.style.color = "white";
+      crecard.style.fontSize = "20px";
+    }
+    crecard.innerHTML = cardnum[i];
+    card1.appendChild(crecard);
+  }
+
+  //   function output(){
+
+  //   }
+</script>
